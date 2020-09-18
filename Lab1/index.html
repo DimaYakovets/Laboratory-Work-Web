@@ -20,10 +20,12 @@
                 <li><a href="#b2">Зірка</a></li>
                 <li><a href="#b3">Кільце</a></li>
             </ul>
-            <li><a href="#c">Додакові матеріали</a></li>
+            <li><a href="#c">Реєстрація</a></li>
+            <li><a href="#d">Додакові матеріали</a></li>
         </ul>
     </header>
-    <div id="a">
+
+    <section id="a">
         <hr>
         <h2>Поняття топології</h2>
         <p>Під топологією (компонуванням, конфігурацією, структурою) комп'ютерної мережі звичайно розуміється фізичне
@@ -49,11 +51,12 @@
             <li><b>Інформаційна топологія</b> (тобто напрямок потоків інформації, переданої мережею).</li>
         </ol>
         </p>
-    </div>
-    <div id="b">
+    </section>
+
+    <section id="b">
         <hr>
         <h2>Найпоширеніші прості топології</h2>
-        <div id="b1">
+        <article id="b1">
             <h3><a
                     href="https://uk.wikipedia.org/wiki/%D0%A8%D0%B8%D0%BD%D0%B0_(%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F)"><em>Шина</em></a>
             </h3>
@@ -123,13 +126,14 @@
                 <li>З додаванням нових робочих станцій падає продуктивність мережі.</li>
             </ul>
             </p>
-        </div>
-        <div id="b2">
+        </article>
+
+        <article id="b2">
             <h3><a
                     href="https://uk.wikipedia.org/wiki/%D0%97%D1%96%D1%80%D0%BA%D0%B0_(%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F)"><em>Зірка</em></a>
             </h3>
+            <img src="https://upload.wikimedia.org/wikipedia/uk/2/25/Star_top.jpg" alt="Зірка">
             <p>
-                <img src="https://upload.wikimedia.org/wikipedia/uk/2/25/Star_top.jpg" alt="Зірка">
                 Зірка — це єдина топологія мережі з явно виділеним центром, до якого підключаються всі інші
                 абоненти. Обмін інформацією йде винятково через центральний комп'ютер, на який лягає більше
                 навантаження, тому нічим іншим, крім мережі, він, як правило, займатися не може. Зрозуміло, що
@@ -176,9 +180,9 @@
             виборі топології зірка знадобиться в кілька разів більше кабелю, ніж при топології шина. Це істотно
             впливає на вартість мережі в цілому й помітно ускладнює прокладку кабелю.
             </p>
-        </div>
+        </article>
 
-        <div id="b3">
+        <article id="b3">
             <h3><a
                     href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BB%D1%8C%D1%86%D0%B5%D0%B2%D0%B0_%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D1%96"><em>Кільце</em></a>
             </h3>
@@ -205,11 +209,11 @@
                     пристрої реконфігурації — спеціальні перемикальні пристрої, прості й надійні.</li>
             </ul>
             </p>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <hr>
-    <form>
+    <form id="c">
         <fieldset>
             <legend>Registration</legend>
             <fieldset>
@@ -217,40 +221,40 @@
                 <label>Username<span>*</span><br>
                     <input type="text" pattern="[a-zA-z0-9]{8,}" required><br>
                 </label>
-                
+
                 <label>Password<span>*</span><br>
                     <input type="password" required><br>
-                </label> 
-                
+                </label>
+
                 <label>Email<span>*</span><br>
                     <input type="email" placeholder="mail@example.com" required><br>
                 </label>
-                
+
                 <label>Date of birth<span>*</span><br>
                     <input type="date" required><br>
                 </label>
-                
+
                 <label>Gender<span>*</span><br>
                     <input type="text" list="gender" required><br>
                     <datalist id="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value="male"></option>
+                        <option value="female"></option>
                     </datalist>
                 </label>
-                
-                <label>Your region <br>
-                    <input type="radio" name="region" value="UA">
+
+                <label>Your region<span>*</span><br>
+                    <input type="radio" name="region" value="UA" required>
                     <label for="male">UA</label>
-                    
-                    <input type="radio" name="region" value="RU">
+
+                    <input type="radio" name="region" value="RU" required>
                     <label for="female">RU</label><br>
                 </label>
 
-                <label>City or village<br>
-                    <input type="radio" name="city-village" value="City">
+                <label>City or village<span>*</span><br>
+                    <input type="radio" name="city-village" value="City" required>
                     <label for="male">City</label>
-                    
-                    <input type="radio" name="city-village" value="Village">
+
+                    <input type="radio" name="city-village" value="Village" required>
                     <label for="female">Village</label><br>
                 </label>
 
@@ -266,7 +270,7 @@
 
                 <input type="checkbox" id="it">
                 <label for="it">Information technology</label><br>
-                
+
                 <input type="checkbox" id="nn">
                 <label for="nn">Neural networks</label>
             </fieldset>
@@ -275,7 +279,8 @@
             <input type="reset" value="Clear all">
         </fieldset>
     </form>
-    <footer id="c">
+    
+    <footer id="d">
         <hr>
         <h2>Додакові матеріали</h2>
         <div>
