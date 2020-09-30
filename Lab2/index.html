@@ -1,90 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My first website</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Топології мереж</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
   <header>
-    <h1>My Website Heading</h1>
+    <h1>Топології мереж</h1>
+    <br>
   </header>
 
-  <!-- тут слід вставити горизонтальну панель навігації -->
   <nav>
     <a href="">Home</a>
-    <a href="">Contacts</a>
-    <a href="">Services</a>
-    <a href="">Produts</a>
-    <a href="">Clients</a>
-    <a href="">About</a>
-    <a href="">Resources</a>
-    <a href="">Extra</a>
+    <a href="">Articles</a>
+    <a href="">Tags</a>
+    <a href="https://github.com/DimaYakovets/Laboratory-Work-Web/tree/master/Lab2">GitHub</a>
   </nav>
 
   <aside>
-    <ul class="side-menu">
-      <li id="menu-header">Main Menu</li>
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
+    <div class="widget">
+      <h3>Навігація</h3>
+      <ul>
+        <li><a href="#a">Поняття топології</a></li>
+        <li><a href="#b">Найпоширеніші прості топології</a></li>
+        <ul>
+          <li><a href="#b1">Шина</a></li>
+          <li><a href="#b2">Зірка</a></li>
+          <li><a href="#b3">Кільце</a></li>
+        </ul>
+        <li><a href="#c">Реєстрація</a></li>
+        <li><a href="#d">Додакові матеріали</a></li>
+      </ul>
+    </div>
+    <div class="widget">
+      <h3>Реєстрація</h3>
+      <form id="c">
+        <fieldset>
+          <legend>About</legend>
+  
+          <label>Username<span>*</span><br>
+            <input type="text" name="username" pattern="[a-zA-z0-9]{8,}" required><br>
+          </label>
+  
+          <label>Password<span>*</span><br>
+            <input type="password" name="password" pattern="[a-zA-z0-9]{8,}" required><br>
+          </label>
+  
+          <label>Email<span>*</span><br>
+            <input type="email" name="email" placeholder="mail@example.com" required><br>
+          </label>
+  
+          <label></label>Date of birth<span>*</span><br>
+          <input type="date" name="birthday" required><br>
+          </label>
+  
+          <label>Gender<span>*</span><br>
+            <input type="text" name="gender" list="gender" required><br>
+            <datalist id="gender">
+              <option value="male"></option>
+              <option value="female"></option>
+            </datalist>
+          </label>
+  
+          <label>Your region<span>*</span><br>
+            <input type="radio" name="region" value="UA" required>
+            <label for="region">UA</label>
+  
+            <input type="radio" name="region" value="RU" required>
+            <label for="region">RU</label><br>
+          </label>
+  
+          <label>City or village<span>*</span><br>
+            <input type="radio" name="city-village" value="City" required>
+            <label for="city-village">City</label>
+  
+            <input type="radio" name="city-village" value="Village" required>
+            <label for="city-village">Village</label><br>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Select your interests</legend>
+  
+          <input type="checkbox" name="art">
+          <label for="art">Art</label><br>
+  
+          <input type="checkbox" name="music">
+          <label for="music">Music</label><br>
+  
+          <input type="checkbox" name="it">
+          <label for="it">Information technology</label><br>
+  
+          <input type="checkbox" name="nn">
+          <label for="nn">Neural networks</label>
+        </fieldset>
+        <div class="form-control">
+          <input type="submit" value="Sign up">
+          <input type="reset" value="Clear all">
+        </div>
+      </form>
+    </div>
   </aside>
-  <main class="main-content">
-    <h2>Lorem ipsum</h2>
 
-    <p id-data="1"> <img src="https://cdn.pixabay.com/photo/2013/02/20/11/30/soap-bubbles-83758__340.jpg"
-        alt="img">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquam culpa sapiente! Dolores
-      tempora
-      magnam libero deleniti corporis maiores delectus beatae nihil ipsa. Explicabo tenetur dolorem eos veritatis
-      magnam. Quod accusantium ea, quae sint obcaecati ad voluptate possimus assumenda rem delectus nihil earum
-      aliquam tempora porro animi iusto a? Ullam exercitationem, neque dicta fugiat alias quaerat doloremque
-      consequatur labore, quasi voluptas expedita ex iste veritatis laboriosam iure fugit! Quis minus dolor nam sed
-      esse.</p>
-
-    <p id-data="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquam culpa sapiente! Dolores
-      tempora
-      magnam libero deleniti corporis maiores delectus beatae nihil ipsa. Explicabo tenetur dolorem eos veritatis
-      magnam. Quod accusantium ea, quae sint obcaecati ad voluptate possimus assumenda rem delectus nihil earum
-      aliquam tempora porro animi iusto a? Ullam exercitationem, neque dicta fugiat alias quaerat doloremque
-      consequatur labore, quasi voluptas expedita ex iste veritatis laboriosam iure fugit! Quis minus dolor nam sed
-      esse.</p>
-
-    <p id-data="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquam culpa sapiente! Dolores
-      tempora
-      magnam libero deleniti corporis maiores delectus beatae nihil ipsa. Explicabo tenetur dolorem eos veritatis
-      magnam. Quod accusantium ea, quae sint obcaecati ad voluptate possimus assumenda rem delectus nihil earum
-      aliquam tempora porro animi iusto a? Ullam exercitationem, neque dicta fugiat alias quaerat doloremque
-      consequatur labore, quasi voluptas expedita ex iste veritatis laboriosam iure fugit! Quis minus dolor nam sed
-      esse.</p>
-
-    <h2>Lorem ipsum</h2>
-
-    <p id-data="2"> <img src="https://cdn.pixabay.com/photo/2013/02/20/11/30/soap-bubbles-83758__340.jpg"
-        alt="img">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquam culpa sapiente! Dolores
-      tempora
-      magnam libero deleniti corporis maiores delectus beatae nihil ipsa. Explicabo tenetur dolorem eos veritatis
-      magnam. Quod accusantium ea, quae sint obcaecati ad voluptate possimus assumenda rem delectus nihil earum
-      aliquam tempora porro animi iusto a? Ullam exercitationem, neque dicta fugiat alias quaerat doloremque
-      consequatur labore, quasi voluptas expedita ex iste veritatis laboriosam iure fugit! Quis minus dolor nam sed
-      esse. </p>
+  <main class="content">
+    <h2>Поняття топології</h2>
+    <section id="a">
+      <p>Під топологією (компонуванням, конфігурацією, структурою) комп'ютерної мережі звичайно розуміється фізичне
+        розташування комп'ютерів мережі один щодо іншого та спосіб їх з'єднання лініями зв'язку. Важливо відзначити,
+        що поняття топології ставиться, насамперед, до локальних мереж, у яких структуру зв'язків можна легко
+        простежити. У глобальних мережах структура зв'язків звичайно схована від користувачів і не надто важлива,
+        тому що кожний сеанс зв'язку може виконуватися по своєму власному шляху.</p>
+      <p>Топологія мережі визначає не тільки фізичне розташування комп'ютерів, але, що набагато важливіше, характер
+        зв'язків між ними, особливості поширення сигналів мережею. Саме характер зв'язків визначає ступінь
+        відмовостійкості мережі, необхідну складність мережної апаратури, найбільш підходящий метод керування
+        обміном, можливі типи середовищ передачі (каналів зв'язку), припустимий розмір мережі (довжина ліній зв'язку
+        й кількість абонентів), необхідність електричного узгодження й багато чого іншого.</p>
+      <p>Коли в літературі згадується про топологію мережі, то можуть мати на увазі чотири зовсім різних поняття, що
+        ставляться до різних рівнів мережної архітектури:
+      <ol>
+        <li><b>Фізична топологія</b> (тобто схема розташування комп'ютерів і прокладки кабелів). У цьому змісті,
+          наприклад, пасивна зірка нічим не відрізняється від активної зірки, тому її нерідко називають просто
+          «зіркою».</li>
+        <li><b>Логічна топологія</b> (тобто структура зв'язків, характер поширення сигналів мережею). Це, напевно,
+          найправильніше визначення топології.</li>
+        <li><b>Топологія керування обміном</b> (тобто принцип і послідовність передачі права на захват мережі між
+          окремими комп'ютерами).</li>
+        <li><b>Інформаційна топологія</b> (тобто напрямок потоків інформації, переданої мережею).</li>
+      </ol>
+    </section>
+    <h2 id="b">Найпоширеніші прості топології</h2>
 
 
-    <p id-data="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquam culpa sapiente! Dolores
-      tempora
-      magnam libero deleniti corporis maiores delectus beatae nihil ipsa. Explicabo tenetur dolorem eos veritatis
-      magnam. Quod accusantium ea, quae sint obcaecati ad voluptate possimus assumenda rem delectus nihil earum
-      aliquam tempora porro animi iusto a? Ullam exercitationem, neque dicta fugiat alias quaerat doloremque
-      consequatur labore, quasi voluptas expedita ex iste veritatis laboriosam iure fugit! Quis minus dolor nam sed
-      esse.</p>
+    <section id="b1">
+      <h3><a
+          href="https://uk.wikipedia.org/wiki/%D0%A8%D0%B8%D0%BD%D0%B0_(%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F)">Шина</a>
+      </h3>
+      <img class="image" src="images/bus.jpg" alt="Topologies">
+      <p>«Шина» — топологія комп'ютерної мережі, яку часто називають також «лінійною шиною»
+        (<strong><em>linear bus</em></strong>). У ній використовується один кабель, що іменується
+        магістраллю або сегментом, до якого підключені всі комп'ютери мережі. Дана топологія є найбільш
+        простою і поширеною реалізацією мережі.</p>
+      <dl>
+        <dt>Термінатор (terminator)</dt>
+        <dd> — поглинач енергії (зазвичай резистор) на кінці довгої лінії, опір якого дорівнює
+          хвильовому опору даної лінії. Слово «термінатор» застосовується в комп'ютерному жаргоні,
+          термінологічним синонімом йому є «узгоджене навантаження».</dd>
+        <dt>Повторювач (repeater)</dt>
+        <dd> — пристрій який повторює сигнал переданий йому на вхід</dd>
+        <dt>Баррел-конектор (barrel connector)</dt>
+        <dd> — пристрій який сполучає дві частини шини між собою</dd>
+      </dl>
+      <p>Топологія шина самою своєю структурою припускає ідентичність мережного устаткування комп'ютерів,
+        а також рівноправність всіх абонентів по доступу до мережі. Комп'ютери в шині можуть передавати
+        інформацію тільки по черзі, тому що лінія зв'язку в цьому випадку єдина. Якщо кілька комп'ютерів
+        будуть передавати інформацію одночасно, вона спотвориться в результаті накладення (конфлікту,
+        колізії). У шині завжди реалізується режим так називаного напівдуплексного
+        (<strong><em>half duplex</em></strong>) обміну (в обох напрямках, але по черзі, а не одночасно).</p>
+      <p>У топології шина відсутній явно виражений центральний абонент, через який передається вся
+        інформація, це збільшує її надійність (адже при відмові центра перестає функціонувати вся
+        керована їм система). Додавання нових абонентів у шину досить просто й зазвичай можливо навіть
+        під час роботи мережі. У більшості випадків при використанні шини потрібна мінімальна кількість
+        сполучного кабелю в порівнянні з іншими топологіями.</p>
+      <p>Електричні сигнали розповсюджуються від одного кінця кабелю до іншого. Якщо не вживати ніякого
+        спеціального заходу, сигнал, досягаючи кінця кабелю, віддзеркалиться і створюватиме перешкоди,
+        не дозволяючи комп'ютерам здійснювати передачу. Тому на кінцях кабелю електричні сигнали
+        необхідно гасити.</p>
+      <p>Для того, щоб запобігти віддзеркаленню електричних сигналів, на кожному кінці кабелю встановлюють
+        термінатори (terminators), що поглинають ці сигнали. Будь-який кінець мережевого кабелю повинен
+        бути до чого-небудь підключений: до комп'ютера або до баррел-конектора (його використовують для
+        збільшення довжини кабелю). До будь-якого вільного, тобто ні до чого не підключеного, кінцю
+        кабелю потрібно під'єднувати термінатор.</p>
+      <p>Фірми, що нормально розвиваються, постійно стикаються з необхідністю розширити мережу, іншими
+        словами, збільшити ділянку, яку вона охоплює. У мережі з топологією «шина» кабель звичайно
+        подовжують двома способами:</p>
+      <ol>
+        <li>Для з'єднання двох відрізків кабелі використовують баррел-конектор (barrel connector). Але
+          зловживати ним не треба, оскільки сигнал при цьому слабшає. Краще купити один довгий кабель,
+          чим сполучати декілька коротких. При великій кількості «стиковок» нерідко відбувається
+          спотворення сигналу.</li>
+        <li>Для з'єднання двох відрізків кабелю використовують повторювач (repeater). На відміну від
+          конектора, він підсилює сигнал перед передачею його в наступний сегмент. Тому краще
+          використовувати повторювач, чим баррел-конектор або навіть довгий кабель: сигнали на великі
+          відстані підуть без спотворень.</li>
+      </ol>
+      <h4><strong>Переваги</strong></h4>
+      <ul>
+        <li>Невеликий час установки мережі;</li>
+        <li>Дешевизна (потрібно менше кабелю і мережевих пристроїв);</li>
+        <li>Простота настройки;</li>
+        <li>Вихід з ладу робочої станції не відбивається на роботі мережі.</li>
+      </ul>
+      <h4><strong>Недоліки</strong></h4>
+      <ul>
+        <li>Несправності в мережі, такі як обрив кабелю і вихід з ладу термінатора, повністю блокують
+          роботу всієї мережі;</li>
+        <li>Складна локалізація несправностей;</li>
+        <li>З додаванням нових робочих станцій падає продуктивність мережі.</li>
+      </ul>
+    </section>
+
+    <section id="b2">
+      <h3><a
+          href="https://uk.wikipedia.org/wiki/%D0%97%D1%96%D1%80%D0%BA%D0%B0_(%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F)">Зірка</a>
+      </h3>
+      <img class="image" src="images/star.jpg" alt="Зірка">
+      <p>
+        Зірка — це єдина топологія мережі з явно виділеним центром, до якого підключаються всі інші
+        абоненти. Обмін інформацією йде винятково через центральний комп'ютер, на який лягає більше
+        навантаження, тому нічим іншим, крім мережі, він, як правило, займатися не може. Зрозуміло, що
+        мережне устаткування центрального абонента повинно бути істотно складнішим, чим устаткування
+        периферійних абонентів. Про рівноправність всіх абонентів (як у шині) у цьому випадку говорити
+        не доводиться. Звичайно центральний комп'ютер найпотужніший, саме на нього покладають всі
+        функції по керуванню обміном. Ніякі конфлікти в мережі з топологією зірка в принципі неможливі,
+        тому що керування повністю централізоване.</p>
+      <p>У центрі мережі з даною топологією міститься не комп'ютер, а спеціальний пристрій — концентратор
+        або, як його ще називають, хаб (<strong><em>hub</em></strong>), що виконує ту ж функцію, що й
+        репітер, тобто відновлює сигнали й пересилає їх в усі інші лінії зв'язку.</p>
+      <p>Виходить, що хоча схема прокладки кабелів подібна активній зірці, фактично мова йде про шинну
+        топологію, тому що інформація від кожного комп'ютера одночасно передається до всіх інших
+        комп'ютерів, а ніякого центрального абонента не існує. Безумовно, пасивна зірка дорожче
+        звичайної шини, тому що в цьому випадку потрібний ще й концентратор. Однак вона надає цілий ряд
+        додаткових можливостей, пов'язаних з перевагами зірки, зокрема, спрощує обслуговування й ремонт
+        мережі. Саме тому останнім часом пасивна зірка усе більше витісняє зірку, що вважається
+        малоперспективною топологією.</p>
+      <p>На відміну від шини, у зірці на кожній лінії зв'язку перебувають тільки два абоненти: центральний
+        й один з периферійних. Найчастіше для їхнього з'єднання використовується дві лінії зв'язку,
+        кожна з яких передає інформацію в одному напрямку, тобто на кожній лінії зв'язку є тільки один
+        приймач й один передавач. Це так звана передача точка-точка. Все це істотно спрощує мережне
+        встаткування в порівнянні із шиною й рятує від необхідності застосування додаткових, зовнішніх
+        термінаторів.</p>
+      <p>Проблема загасання сигналів у лінії зв'язку також вирішується в зірці простіше, ніж у випадку
+        шини, адже кожен приймач завжди одержує сигнал одного рівня. Гранична довжина мережі з
+        топологією зірка може бути вдвічі більше, ніж у шині (тобто 2*L<sub>пр</sub>), тому що кожний з
+        кабелів, що з'єднує центр із периферійним абонентом, може мати довжину L<sub>пр</sub>.</p>
+
+      <h4>Переваги</h4>
+      <p>
+        Велика перевага зірки (як активної, так і пасивної) полягає в тому, що всі точки підключення зібрані
+        в одному місці. Це дозволяє легко контролювати роботу мережі, локалізувати несправності шляхом
+        простого відключення від центра тих або інших абонентів (що неможливо, наприклад, у випадку шинної
+        топології), а також обмежувати доступ сторонніх осіб до життєво важливих для мережі точок
+        підключення. До периферійного абонента у випадку зірки може підходити як один кабель (по якому йде
+        передача в обох напрямках), так і два (кожний кабель передає в одному із двох зустрічних напрямків),
+        причому останнє зустрічається набагато частіше.
+      </p>
+      <h4>Недоліки</h4>
+      <p>
+        Загальним недоліком для всіх топологій типу зірка (як активної, так і пасивної) є значно більша, ніж
+        при інших топологіях, витрата кабелю. Наприклад, якщо комп'ютери розташовані в одну лінію, то при
+        виборі топології зірка знадобиться в кілька разів більше кабелю, ніж при топології шина. Це істотно
+        впливає на вартість мережі в цілому й помітно ускладнює прокладку кабелю.
+      </p>
+    </section>
+
+    <section id="b3">
+      <h3><a
+          href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BB%D1%8C%D1%86%D0%B5%D0%B2%D0%B0_%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D1%96">Кільце</a>
+      </h3>
+      <img class="image" src="images/ring.png" alt="">
+      <p>У комп'ютерній мережі з топологією «кільце» комп'ютери підключаються до кабелю, замкнутого в
+        коло. Тому у кабелі просто не може бути вільного кінця, на який треба поставити термінатор.
+        Сигнали передаються по кільцю в одному напрямі і проходять через кожен комп'ютер. На відміну від
+        пасивної топології «шина», тут кожен комп'ютер виступає в ролі повторювача, підсилюючи сигнали і
+        передаючи їх наступному комп'ютеру. Тому, якщо вийде з ладу один комп'ютер, припиняє
+        функціонувати вся мережа.</p>
+      <p>Один із способів передачі даних по кільцевій мережі називається передачею маркера (англ. token).
+        Мережа Token-ring має топологію кільце, хоча зовні вона більше нагадує зірку. Це пов'язано з
+        тим, що окремі абоненти (комп'ютери) приєднуються до мережі не прямо, а через спеціальні
+        концентратори або багатостанційні пристрої доступу (MSAU або MAU — Multistation Access Unit).
+        Фізично мережа утворює зірково-кільцеву топологію. У дійсності ж абоненти поєднуються все-таки в
+        кільце, тобто кожний з них передає інформацію одному сусідньому абонентові, а приймає інформацію
+        від іншого.</p>
+      <h4><strong>Недоліки</strong></h4>
+      <ul>
+        <li>відмова одного комп'ютера в мережі може вплинути на працездатність всієї мережі;</li>
+        <li>додавання або видалення комп'ютера змушує розривати мережу, усувається завдяки використанню
+          «подвійного» кільця. Для цього до складу локальної мережі включають додаткові лінії зв'язку
+          пристрої реконфігурації — спеціальні перемикальні пристрої, прості й надійні.</li>
+      </ul>
+    </section>
+
+    <h2>Додакові матеріали</h2>
+    
+    <section>
+      <h3>Відео</h3>
+      <div class="addition-materials-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9jmV8sAF-cI" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+        <br>
+      <h3>Статті</h3>
+      <a
+        href="https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6">Топологія
+        мереж</a><br>
+      <a href="https://comp-net.at.ua/index/topologija_komp_39_juternikh_merezh/0-6">Топологія комп'ютерних
+        мереж</a>
+    </section>
   </main>
-  <div></div>
-  <footer>
-    <p> &copy 2020, All Right Reserved. </p>
+
+  <footer id="d">
+    <p>Copyright © 2020.</p>
   </footer>
 </body>
 
