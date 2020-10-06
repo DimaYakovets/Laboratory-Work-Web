@@ -1,22 +1,90 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background:  #494d5f
+}
+
+.content a {
+    color: black;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
 /*Бічна панель*/
 aside {
-    margin-top: 25px;
+    margin-top: 10px;
     float: right;
     width: 19%;
 }
 
-aside .widget {
+.widget-head {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: #8458b3;
+    border: thin solid black;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.widget-body {
     margin-bottom: 15px;
     text-align: left;
     margin-right: 5px;
     border: thin solid black;
     border-radius: 5px;
     padding: 0;
+    background: #d0bdf4;
     padding: 3px;
+}
+
+.widget-body .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-body a {
+    margin: 3px;
+    font-size: 15px;
+    border: thin solid black;
+    background: #8458b3;
+    padding: 2px;
+    border-radius: 5px;
+    transition: 100ms;
+    color: black;
+    text-decoration: none;
+}
+
+.widget-body a:hover {
+    background-color: rebeccapurple;
+    color: white;
+    transform: scale(1.03);
+}
+
+.widget-body input {
+    background: #7c57a3;
+    color: white;
+    border-radius: 5px;
+}
+
+.widget-body input::placeholder {
+    color: #eee;
+}
+
+.widget-body label {
+    color: #000;
 }
 
 legend {
     text-align: center;
+
 } 
 
 .form-control {
@@ -24,34 +92,21 @@ legend {
     text-align: center;
 }
 
-aside div ul {
-    list-style: decimal;
-    text-align: left;
-    padding-left: 20px;
-}
 
-aside div h3{
+aside div h3 {
     text-align: center;
-}
-
-aside div a {
-    color: black;
-    text-decoration: none;
-    transition: 300ms;
-}
-
-aside div a:hover {
-    color: red;
 }
 
 /*Заголовок*/
 header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    color: #fff;
 }
 
 /*Основний контент*/
 .content {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 80%;
 }
 
@@ -62,65 +117,93 @@ header h1 {
     margin-top: 0;
     margin-left: 5px;
     margin-bottom: 10px;
+    background: #d0bdf4;
 }
 
-.image {
+.content h2 {
+    background: #8458b3;
+}
+
+.content .image {
     height: 200px;
     float: left;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: thin solid black;
+    background: white;
 }
 
-h2 {
+.content h2 {
     text-align: center;
 }
 
-section > h3 {
+.content h3 {
     text-align: center;
-}
-
-h3 > a {
-    text-decoration: none;
-    color: black;
-}
-
-h3 > a:hover {
-    text-decoration: underline;
 }
 
 /*Навігаціяна панель*/
 nav {
     margin-left: 5px;
-    margin-top: 10px;
     margin-right: 5px;
-    margin-bottom: 5px;
     height: 40px;    
     padding: 20px 5px 5px;
-    background: #eee;
+    background: #8458b3;
     text-align: center;
     border: thin solid black;
+    border-radius: 5px;
 }
 
 nav a {
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 60px;
+    margin: 5px;
+    text-align: center;
     font-size: 18px;
     text-decoration: none;
     color: black;
     height: inherit;
     border-bottom: thin dashed black;
-    transition: 300ms;
 }
-
 nav a:hover {
-    color: #c00;
+    color: #eee;
 }
 
 /*Додаткові матеріали*/
-.addition-materials-video {
-    display: flex;
-    justify-content: center;
+.addition {
+    overflow: auto;
+}
+
+.addition-videos {
+    text-align: center;
+    float: left;
+    width: 50%;
+}
+
+.addition-articles {
+    float: right;
+    width: 50%;
+}
+
+.addition-articles h3 {
+    text-align: center;
+}
+
+.goup {
+    float: right;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+    background-color: #8458b3;
+    padding: 3px;
+    border-radius: 5px;
+    border: thin solid black;
+}
+.goup:hover {
+    background-color: rebeccapurple;
+    color: white;
 }
 
 /*Футер*/
 footer {
     text-align: center;
+    color: white;
 }

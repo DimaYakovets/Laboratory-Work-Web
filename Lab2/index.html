@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Топології мереж</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="images/icon.svg">
 </head>
 
 <body>
@@ -16,38 +17,38 @@
 
   <nav>
     <a href="">Home</a>
+    <a href="">News</a>
     <a href="">Articles</a>
     <a href="">Tags</a>
+    <a href="">Hot</a>
+    <a href="">Topics</a>
     <a href="https://github.com/DimaYakovets/Laboratory-Work-Web/tree/master/Lab2">GitHub</a>
   </nav>
 
   <aside>
-    <div class="widget">
-      <h3>Навігація</h3>
-      <ul>
-        <li><a href="#a">Поняття топології</a></li>
-        <li><a href="#b">Найпоширеніші прості топології</a></li>
-        <ul>
-          <li><a href="#b1">Шина</a></li>
-          <li><a href="#b2">Зірка</a></li>
-          <li><a href="#b3">Кільце</a></li>
-        </ul>
-        <li><a href="#c">Реєстрація</a></li>
-        <li><a href="#d">Додакові матеріали</a></li>
-      </ul>
+    <h3 class="widget-head">Навігація</h3>
+    <div class="widget-body">
+      <div class="list">
+        <a href="#a">Поняття топології</a>
+        <a href="#b">Найпоширеніші прості топології</a>
+        <a href="#b1">Шина</a>
+        <a href="#b2">Зірка</a>
+        <a href="#b3">Кільце</a>
+        <a href="#c">Додакові матеріали</a>
+      </div>
     </div>
-    <div class="widget">
-      <h3>Реєстрація</h3>
-      <form id="c">
+    <h3 class="widget-head">Реєстрація</h3>
+    <div class="widget-body">
+      <form>
         <fieldset>
           <legend>About</legend>
   
           <label>Username<span>*</span><br>
-            <input type="text" name="username" pattern="[a-zA-z0-9]{8,}" required><br>
+            <input type="text" name="username" placeholder="username" pattern="[a-zA-z0-9]{8,}" required><br>
           </label>
   
           <label>Password<span>*</span><br>
-            <input type="password" name="password" pattern="[a-zA-z0-9]{8,}" required><br>
+            <input type="password" name="password" placeholder="password" pattern="[a-zA-z0-9]{8,}" required><br>
           </label>
   
           <label>Email<span>*</span><br>
@@ -285,23 +286,34 @@
 
     <h2>Додакові матеріали</h2>
     
-    <section>
-      <h3>Відео</h3>
-      <div class="addition-materials-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9jmV8sAF-cI" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="addition" id="c">
+      <div class="addition-videos">
+        <h3>Відео</h3>
+        <div class="addition-materials-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/9jmV8sAF-cI" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
-        <br>
-      <h3>Статті</h3>
-      <a
-        href="https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6">Топологія
-        мереж</a><br>
-      <a href="https://comp-net.at.ua/index/topologija_komp_39_juternikh_merezh/0-6">Топологія комп'ютерних
-        мереж</a>
+
+      <div class="addition-articles">
+        <h3>Статті</h3>
+        <ul>
+          <li>
+            <a
+            href="https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6">Топологія
+            мереж</a>
+          </li>
+          <li>
+            <a href="https://comp-net.at.ua/index/topologija_komp_39_juternikh_merezh/0-6">Топологія комп'ютерних
+              мереж</a>
+          </li>
+        </ul>
+        </div>
     </section>
   </main>
 
-  <footer id="d">
+  <footer>
+    <a class="goup" href="#">Вверх</a>
     <p>Copyright © 2020.</p>
   </footer>
 </body>
