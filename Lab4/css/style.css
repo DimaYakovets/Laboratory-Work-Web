@@ -1,0 +1,124 @@
+@media screen and (max-width: 950px) {
+    .form-container{
+        width: 95%;
+        margin: auto;
+    }
+    .content-part {
+        width: 96%;
+        padding: 10px;
+        margin: 0px 2% 10px 2%;
+        background: #423761;
+        border: thin solid white;
+        border-radius: 5px;
+    }
+}
+@media screen and (min-width: 950px) {
+    .form-container{
+        width: 80%;
+        margin: auto;
+    }
+    .content-part {
+        width: 90%;
+        padding: 10px;
+        margin: 0px 5% 10px 5%;
+        background: #423761;
+        border: thin solid white;
+        border-radius: 5px;
+    }
+}
+
+* {
+    color: #eee;
+    font-size: 15px;
+}
+body {
+    background: #471A36;
+}
+dialog {
+    background: #471A36;
+    width: 300px;
+}
+main {
+    margin-top: 60px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+option{
+    color: black;
+}
+span.msg {
+    color: red;
+}
+
+.content-part h3 {
+    text-align: center;
+}
+.content-part p {
+    text-align: center;
+}
+footer{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.inside {
+    position: absolute;
+    top: 18px;
+    left: 12px;
+    margin-top: auto;
+    width: 25px;
+    height: 25px;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    transform: rotate(-45deg);
+}
+
+#goUp {
+    display: none; 
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: red; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 50%; 
+    height: 50px; 
+    width: 50px; 
+  }
+  
+#goUp:hover {
+    background-color: darkred; 
+}
+#quiz {
+    display: none;
+}
+.msg{
+    display: block;
+    height: 14px;
+    font-size: 14px;
+    color: #f33;
+}
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+.time {
+    margin: 0 20px 0 0;
+}
+.card *{
+    color: black;
+}
+.card h5 {
+    margin: 0;
+}

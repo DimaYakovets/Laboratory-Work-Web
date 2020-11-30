@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Quizer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, userscalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quizer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Linq 1</a>
+                        <a class="dropdown-item" href="#">Linq 2</a>
+                        <a class="dropdown-item" href="#">Linq 3</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <button class="btn btn-primary" onclick="ShowHide()">Show/Hide quiz</button>
+                    <button class="btn btn-primary" id="show-cards"> Load cards</button>
+                </li> 
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <span id="datetime" class="time"></span>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <dialog>
+        <div class="dialog-body">
+            <p>Thank you for your answer.</p>
+        </div>
+        <div class="flex-container">
+            <button id="closeDialog" class="btn btn-primary">Close</button></p>
+        </div>
+    </dialog>
+    <main>
+        <section class="content-part">
+            <h3>Game recomendation</h3>
+            <p>This quiz help you to choose game based on your chosen preferences. <br>
+                Before we start you have to Log In on your acount or crate new one.</p>
+            <h3>Log In</h3>
+            <div class="form-container">
+                <form name="login">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                            <input type="email" name="email" class="form-control" id="email"
+                                aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <small id="mail-msg" class="msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password<span>*</span></label>
+                        <input type="password" name="password" title="Символів не менше восьми" class="form-control"
+                            id="password" placeholder="Password" required>
+                        <small id="password-msg" class="msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Repeat Password<span>*</span></label>
+                        <input type="password" name="password-repeat" title="Символів не менше восьми"
+                            class="form-control" id="password-repeat" placeholder="Repeat Password" required>
+                        <small id="rep-password-msg" class="msg"></small>
+                    </div>
+                    <button type="button" class="btn btn-info" id="validate-login">Validate</button>
+                    <button type="submit" class="btn btn-primary" id="submit" hidden>Submit</button>
+                </form>
+                <p></p>
+            </div>
+            <div class="form-container">
+                <form id="quiz">
+                    <h3>The quiz</h3>
+                    <fieldset>
+                        <label>Slect your favorite genres</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" name="shooter">
+                            <span class="form-check-label" for="shooter">Shooter</span>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" name="survival">
+                            <span class="form-check-label" for="survival">Survival </span>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" name="metroidvania">
+                            <span>Metroidvania</span>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" name="point-and-click">
+                            <span class="form-check-label" for="point-and-click">Point and
+                                click</span>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" name="sandbox">
+                            <label class="form-check-label" for="sandbox">Sandbox</label>
+                        </div>
+                        <span id="genres-msg" class="msg"></span>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="hours-time" id="hours-lable">Enter hours count (10h)</label>
+                            <input type="range" min="10" max="30" value="12" onchange="updateHours(this.value)"
+                                class="form-control-range" id="hours-time">
+                        </div>
+                        <div class="form-group">
+                            <label for="setting">Select setting</label>
+                            <select class="form-control" id="setting">
+                                <option>Fantasy</option>
+                                <option>Sci-fi</option>
+                                <option>Cyberpunk</option>
+                                <option>Steampunk</option>
+                                <option>Space</option>
+                            </select>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label>Select protagonist</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="male" name="protagonist" class="custom-control-input">
+                                <label class="custom-control-label" for="male">Male</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="female" name="protagonist" class="custom-control-input">
+                                <label class="custom-control-label" for="female">Female</label>
+                                <span id="protagonist-msg" class="msg"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="price" id="price-lable">Enter minimal price (5$)</label>
+                            <input type="range" min="0" max="25" value="5" onchange="updatePrice(this.value)"
+                                class="form-control-range" name="price">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="content-part grid-box" id="cards"></section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2020.</p>
+        <button onclick="topFunction()" id="goUp">
+            <div class="inside"></div>
+        </button>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

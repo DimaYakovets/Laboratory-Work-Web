@@ -1,0 +1,128 @@
+body {
+    color: black;
+}
+section{
+    margin-bottom: 30px;
+}
+footer {
+    vertical-align: middle;
+    width: 100%;
+    height: 40px;
+    background: black;
+}
+footer h4{
+    text-align: center;
+    color: white;
+    bottom: 0;
+}
+.trans-time{
+    transition: 700ms;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.banner-content {
+    color: white;
+    margin: auto;
+    top: 15%;
+    text-align: center;
+}
+a.button {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    width: 100px;
+    padding: 2px 15px;
+    transition: 500ms;
+}
+.button:hover {
+    background: #007bff;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    
+}
+.top-background {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+.buy-area{
+    padding-top: 40px;
+    background-color: #04091e;
+}
+.lnr {
+    font-size: 25px;
+    margin: 0 10px 0 0;
+    color: #007bff;
+}
+.top-cover{
+    height: 940px;
+}
+.feature-card{
+    background-color: #f7f7ff;
+    font-size: 13px;
+    transition: 500ms;
+    padding: 15px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+.feature-card:hover{
+    box-shadow: 0px 5px 10px #007bff79;
+    background-color: white;
+}
+.review-card{
+    margin-bottom: 10px;
+    background-color: #f7f7ff;
+    transition: 500ms;
+    padding: 10px;
+}
+.review-card:hover{
+    box-shadow: 0px 5px 10px #007bff79;
+    background-color: #fff;
+}
+.desc {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+.product-card {
+    text-align: center;
+    background: white;
+    margin: 15px auto 30px auto;
+    border-radius: 10px;
+    height: 380px;
+    padding: 30px 10px 10px 10px;
+}
+.photo {
+    width: 450px;
+}
+.content-box-2{
+    margin-top: 10px;
+    background: #f0f0ff;
+}
+.checked {
+    color: #007bff;
+}
+.pre-order-btn {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 2px 15px;
+}
+.pre-order-btn:hover{
+    text-decoration: none;
+    color: white;
+    background:linear-gradient(0deg, #235ee7, #4ae7fa);
+}
+.faq-area {
+    background: url(../images/faq-bg.jpg) center;
+    background-size: cover
+}
