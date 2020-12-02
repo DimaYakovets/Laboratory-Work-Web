@@ -23,58 +23,99 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg trans-time navbar-light" id="nav-bar">
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-ad-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <img class="img-fluid" src="https://miro.medium.com/max/768/1*uqGSGpfTRVKfHYCWEwmKxw.jpeg" alt=""
+                    srcset="">
+                <div>
+                    <button type="button" class="btn btn-primary modal-ok">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg transition-time navbar-dark" id="nav-bar">
         <img class="navbar-brand" src="images/logo.png" />
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">ABOUT<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#about">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">SERVICE<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#network">Network<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">UNIQUE FEATURE<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#features">Features<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">REVIEW<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#order">Pre order<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">FAQ<span class="sr-only">(current)</span></a>
+                    <a class="nav-link font-weight-bold" href="#reviews">Rewiev<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" href="#faq">FAQ<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
+
     <main>
         <section class="top-cover top-background">
             <div class="banner-content col-lg-10">
                 <h5 class="text-white text-uppercase">Now you can feel the Heat</h5>
-                <h1>
-                    Smart New Future
-                </h1>
+                <h1> Smart New Future </h1>
                 <a href="#" class="button">Buy Now</a>
             </div>
         </section>
-        <section class="content-box-1">
+        <section class="home">
             <div class="container">
                 <div class="d-flex flex-row justify-content-center flex-wrap">
                     <div class="col-lg-6 float-left">
                         <h6>Brand new app to blow your mind</h6>
-                        <h1>We’ve made a life <br>
-                            that will change you</h1>
+                        <h1>We’ve made a life that will change you</h1>
                         <p><span>We are here to listen from you deliver exellence</span></p>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt
                             ut labore et dolore magna aliqua. Ut enim ad minim.
                         </p>
-                        <a class="btn btn-dark" href="#">Get Started now</a>
+                        <a class="button" href="#">Get Started now</a>
                     </div>
                     <div class=" col-lg-6 float-right">
                         <img class="img-fluid" src="images/21.jpg" alt="" srcset="">
@@ -82,7 +123,7 @@
                 </div>
             </div>
         </section>
-        <section class="content-box-2">
+        <section class="about-area" id="about">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-60 col-lg-10">
@@ -119,7 +160,7 @@
                         <img class="mx-auto d-block img-fluid" src="images/c1.png" alt="">
                     </div>
                     <div class="col-lg-3 course-right">
-                        <div class="">
+                        <div>
                             <span class="lnr lnr-apartment"></span>
                             <a href="#">
                                 <h4>High Performance</h4>
@@ -129,7 +170,7 @@
                                 incid.idunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
-                        <div class="">
+                        <div>
                             <span class="lnr lnr-phone"></span>
                             <a href="#">
                                 <h4>High Performance</h4>
@@ -143,7 +184,7 @@
                 </div>
             </div>
         </section>
-        <section class="home-about-area">
+        <section class="home-about-area" id="network">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-lg-6 home-about-left">
@@ -165,7 +206,7 @@
                 </div>
             </div>
         </section>
-        <section class="feature-area section-gap">
+        <section class="feature-area section-gap" id="features">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="text-center">
@@ -231,7 +272,7 @@
                 </div>
             </div>
         </section>
-        <section class="buy-area section-gap">
+        <section class="buy-area section-gap" id="order">
             <div class="container">
                 <div>
                     <h1 class="text-center text-white">Pre order now</h1>
@@ -289,7 +330,7 @@
                 </div>
             </div>
         </section>
-        <section class="review-area section-gap">
+        <section class="review-area section-gap" id="reviews">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-60 col-lg-10">
@@ -415,76 +456,71 @@
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        <button class="collapsed" data-toggle="collapse" data-target="#collapseOne"
                                             aria-expanded="true" aria-controls="collapseOne">
-                                            Are your Templates responsive?
+                                            Can I trust this store?
                                         </button>
                                     </h5>
                                 </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam omnis
+                                        recusandae temporibus velit nostrum consequuntur laudantium possimus unde
+                                        consectetur qui.
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="headingTwo">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            Does it have all the plugin as mentioned?
+                                        <button class="collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Are all these watches original?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eveniet ducimus
+                                        obcaecati eum, eligendi amet. Officiis reprehenderit maiores accusantium
+                                        voluptatem.
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="headingThree">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            Can i use the these theme for my client?
+                                        <button class="collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Does it come with a guarantee?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iusto aut
+                                        porro soluta minus unde itaque rerum maiores repudiandae eligendi!
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header" id="headingThree">
+                                <div class="card-header" id="headingFour">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            Are your Templates responsive?
+                                        <button class="collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Can I buy on credit?
                                         </button>
                                     </h5>
                                 </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingThree"
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi exercitationem,
+                                        ab eos cupiditate provident ipsum vero sunt natus modi non.
                                     </div>
                                 </div>
                             </div>
@@ -495,7 +531,35 @@
         </section>
     </main>
     <footer>
-        <h4>Copyright 2020</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="text-white">About Us</h6>
+                    <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+                        commodi cupiditate!</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">Follow Us</h6>
+                    <div>
+                        <a href=""><a href="http://www.facebook.com"><i class="fa fa-facebook"></i> Facebook</a></a>
+                        <a href=""><a href="http://www.twitter.com"><i class="fa fa-twitter"></i> twitter</a></a>
+                        <a href=""><a href="http://www.pinterest.com"><i class="fa fa-pinterest"> Pinterest</i></a></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">Join us</h6>
+                    <div>
+                        <button type="submit" class="btn btn-primary" id="register-btn">Register</button>
+                        <button type="submit" class="btn btn-primary" id="register-btn">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="go-up transition-time" id="go-up-btn" href="#">
+            <div class="outside">
+                <div class="inside"></div>
+            </div>
+        </a>
     </footer>
     <script src="js/index.js"></script>
 </body>

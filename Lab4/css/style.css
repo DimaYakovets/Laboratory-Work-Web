@@ -38,6 +38,9 @@ dialog {
     background: #471A36;
     width: 300px;
 }
+summary:focus {
+    outline: none;
+}
 main {
     margin-top: 60px;
 }
@@ -50,7 +53,10 @@ main {
 option{
     color: black;
 }
-span.msg {
+small {
+    color: red;
+}
+.red-msg{
     color: red;
 }
 

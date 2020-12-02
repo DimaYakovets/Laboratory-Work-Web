@@ -1,13 +1,27 @@
-function onScroll() {
-    if (document.documentElement.scrollTop > 50) {
-        $('#nav-bar').removeClass('navbar-light');
-        $('#nav-bar').addClass('navbar-dark');
-        $('#nav-bar').css("background-color", "#000000d0");
-    }
-    else {
-        $('#nav-bar').removeClass('navbar-dark');
-        $('#nav-bar').addClass('navbar-light');
-        $('#nav-bar').css("background-color", "transparent");
-    }
-}
-window.onscroll = function () { onScroll() };
+(function () {
+    window.onscroll = function onScroll() {
+        if (document.documentElement.scrollTop > 500) {
+            $('#go-up-btn').css('opacity', '90%');
+        }
+        else {
+            $('#go-up-btn').css('opacity', '0%');
+        }
+        if (document.documentElement.scrollTop > 50) {
+            $('#nav-bar').css("background-color", "#000000d0");
+        }
+        else {
+            $('#nav-bar').css("background-color", "transparent");
+        }
+    };
+    setTimeout(() => {
+        $('.bd-ad-lg').modal({
+            backdrop: 'static',
+        })
+    }, 1000);
+    $('#register-btn').click(function (e) { 
+        $('#register-modal').modal({
+            backdrop: 'static',
+        })
+    });
+
+})();

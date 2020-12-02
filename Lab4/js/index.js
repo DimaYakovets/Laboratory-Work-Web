@@ -26,11 +26,6 @@ const data =
         title: "The black hole",
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRVU7Pf5Eau07YG_hHiGMdwKIjP1iBPWQveZqGzCAcf7lbQ1cbwWdftXlqsRGKMHuR1Q1TbkcRl9ORb4bEvFztUZFL4XCGcZo&usqp=CAU&ec=45732301",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet arcu et odio sagittis lobortis. Nam in maximus elit. Vivamus."
-    },
-    {
-        title: "Bridge",
-        src: "https://www.avantixlearning.ca/wp-content/uploads/2020/02/final-picture-after-merge-shapes-intersect-applied-in-PowerPoint.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet arcu et odio sagittis lobortis. Nam in maximus elit. Vivamus."
     }
 ];
 
@@ -48,7 +43,7 @@ function passHandler() {
 function passRepHandler() {
     inputBlur(repPassword.value, 8, repPassMsg);
 }
-function scrollFunction() {
+function showHideGoUp() {
     if (document.documentElement.scrollTop > 200) {
         goUp.style.display = "block";
     }
@@ -125,8 +120,9 @@ function updateHours(val) {
 }
 document.getElementById("show-cards").addEventListener("click", function showCards()
 {  
+    cards.removeAttribute("hidden");
     for (const item of data) {
-        cards.innerHTML += `<div class="card" style="width: 100%;">
+        cards.innerHTML += `<div class="card" style="width: 100%; height: 450px;">
         <img src="${item.src}" class="card-img-top" alt="Image" >
         <div class="card-body">
         <h5 class="card-title">${item.title}</h5>
@@ -144,12 +140,13 @@ document.querySelector('#closeDialog').onclick = function() {
 }
 setInterval(function () {  
     var dt = new Date();
-    document.getElementById("datetime").innerHTML = dt.getHours().toString().padStart(2, "0") + ":" +
+    document.getElementById("datetime").innerHTML = 
+    dt.getHours().toString().padStart(2, "0") + ":" +
     dt.getMinutes().toString().padStart(2, "0") + ":" +
     dt.getSeconds().toString().padStart(2, "0");
 }, 500);
 
-window.onscroll = function () { scrollFunction() };
+window.addEventListener("scroll",showHideGoUp);
 password.addEventListener("blur", passHandler);
 repPassword.addEventListener("blur", passRepHandler);
 validateBtn.addEventListener("click", validatePassword);
